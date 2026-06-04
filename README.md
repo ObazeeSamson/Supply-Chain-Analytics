@@ -111,9 +111,9 @@ Vendor Bottlenecks: Cross-chart filtering shows that specific suppliers signific
 - Overview Dashboard: Provides executives with macro metrics regarding profit, global revenue ($605.61K), and high-level fulfillment reliability tracking.
 ![Overview Dashboard Screen](Overview.png)
 - Suppliers Dashboard: Leverages a Drill-Down Network structure to outline relational constraints binding suppliers to specific distribution points.
-![Suppliers Dashboard Screen](Suppliers.png)
+![Suppliers Dashboard Screen](Supliers.png)
 - Inventory Dashboard: Examines warehouse shelf health, tracking spoilage trends alongside specific category volume deficits.
-![Inventory Dashboard Screen](Inventor.png)
+![Inventory Dashboard Screen](Inventory.png)
 
 ## Recommendations
 
