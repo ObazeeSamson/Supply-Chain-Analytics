@@ -36,7 +36,7 @@ The transactional dataset for this project was provided by the [ZoomCharts 4U Re
 - Which specific vendor suppliers, distribution warehouses, or target customer channels are failing to meet performance benchmarks? 
 - How exactly do physical operational errors manifest as direct financial margin leakage and lost profit? 
 
-Data Analysis
+## Data Analysis
 Power Query / M Code
 Calculating delivery fulfillment lead times via Custom Column arithmetic during data ingestion:
 
@@ -63,44 +63,24 @@ IF(
     BLANK(), 
     DATEDIFF('Sales'[OrderDate], 'Sales'[ShipDate], DAY)
 )
-Key Insights
+## Key Insights
 
-Operational Disruption Profile: Operational bottlenecks are roughly split evenly, with product quality issues representing 50.09% of financial friction and stockout deficiencies making up the remaining 49.91%.
-
-
-Financial Erosion: Isolated a macro revenue loss of $37.20K caused entirely by underlying delivery failures and fulfillment stock shortages.
-
-
+- Operational Disruption Profile: Operational bottlenecks are roughly split evenly, with product quality issues representing 50.09% of financial friction and stockout deficiencies making up the remaining 49.91%.
+- Financial Erosion: Isolated a macro revenue loss of $37.20K caused entirely by underlying delivery failures and fulfillment stock shortages.
 Vendor Bottlenecks: Cross-chart filtering shows that specific suppliers significantly underperform against the baseline 95% target, directly dragging down distribution facility timelines.
+- Inventory Perishability: Mapping historical inventory longevity trends exposes notable spikes in expired food and beverage quantities during peak stock volume periods.
 
-
-Inventory Perishability: Mapping historical inventory longevity trends exposes notable spikes in expired food and beverage quantities during peak stock volume periods.
-
-Dashboard Preview
+## Dashboard Preview
 The analytical control system is arranged into three distinct business views:
-
 Overview Dashboard: Provides executives with macro metrics regarding profit, global revenue ($605.61K), and high-level fulfillment reliability tracking.
-
-
 Suppliers Dashboard: Leverages a Drill-Down Network structure to outline relational constraints binding suppliers to specific distribution points.
-
-
 Inventory Dashboard: Examines warehouse shelf health, tracking spoilage trends alongside specific category volume deficits.
-
-(Note: Replace these text placeholders with links to your dashboard screenshots from your GitHub repository folder)
-
 ![Overview Dashboard Screen](path/to/Overview_Screenshot.png)
-
 ![Suppliers Dashboard Screen](path/to/Suppliers_Screenshot.png)
-
 ![Inventory Dashboard Screen](path/to/Inventory_Screenshot.png)
 
-Recommendations
+## Recommendations
 
-Enforce Vendor SLAs: Use the Vendor Performance & Risk Matrix to hold underperforming suppliers accountable whose delivery rates slip past acceptable cycle parameters.
-
-
-Balance Channel Inventory: Optimize stock distribution logic across sensitive service accounts like HoReCa, which experience localized fulfillment strains.
-
-
-Refine Waste Mitigation: Adjust opening stock counts across product lines showing highly recurrent expiration patterns to protect margins from warehouse waste.
+- Enforce Vendor SLAs: Use the Vendor Performance & Risk Matrix to hold underperforming suppliers accountable whose delivery rates slip past acceptable cycle parameters.
+- Balance Channel Inventory: Optimize stock distribution logic across sensitive service accounts like HoReCa, which experience localized fulfillment strains.
+- Refine Waste Mitigation: Adjust opening stock counts across product lines showing highly recurrent expiration patterns to protect margins from warehouse waste.
