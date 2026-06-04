@@ -115,8 +115,7 @@ Vendor Bottlenecks: Cross-chart filtering shows that specific suppliers signific
 - Inventory Dashboard: Examines warehouse shelf health, tracking spoilage trends alongside specific category volume deficits.
 ![Inventory Dashboard Screen](Inventory.png)
 
-## View Project
-[Power Bi Web](https://app.powerbi.com/view?r=eyJrIjoiY2U3OGUzNTQtM2E5MS00ZjBlLWFiOTMtN2Y4NjdjZmQzZjAxIiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9)
+## [View Project](https://app.powerbi.com/view?r=eyJrIjoiY2U3OGUzNTQtM2E5MS00ZjBlLWFiOTMtN2Y4NjdjZmQzZjAxIiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9)
 ## Recommendations
 
 - Enforce Vendor SLAs: Use the Vendor Performance & Risk Matrix to hold underperforming suppliers accountable whose delivery rates slip past acceptable cycle parameters.
