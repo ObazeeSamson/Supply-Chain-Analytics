@@ -1,15 +1,16 @@
 # Supply Chain Optimization Analytics
 ## Table of Content
 Project Overview
-
-- Data Source
-- Tools Used
-- Data Preparation and Cleaning
-- Exploratory Data Analysis
-- Data Analysis
-- Key Insights
-- Dashboard Preview
-- Recommendations
+- [Project Overview](#Project-Overview)
+- [Data Source](#Data-Source)
+- [Tools Used](#Tools-Used)
+- [Data Preparation and Cleaning](#Data-Preparation-and-Cleaning)
+- [Exploratory Data Analysis](#Exploratory-Data-Analysis)
+- [Data Analysis](#Data-Analysis)
+- [Key Insights](#key-Insights)
+- [Dashboard Preview](#Dashboard-Preview)
+- [Recommendations](#Recommendations)
+  
 ## Project Overview
 This project analyzes an end-to-end food and beverage supply chain dataset spanning from initial order placement down to final fulfillment. The primary goal is to empower supply chain managers and executives to track operational performance, identify systemic inefficiencies, isolate operational risks, and directly link logistics disruptions to revenue erosion and financial outcomes.
 
