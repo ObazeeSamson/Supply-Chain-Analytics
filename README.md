@@ -37,32 +37,69 @@ The transactional dataset for this project was provided by the [ZoomCharts 4U Re
 - How exactly do physical operational errors manifest as direct financial margin leakage and lost profit? 
 
 ## Data Analysis
-Power Query / M Code
-Calculating delivery fulfillment lead times via Custom Column arithmetic during data ingestion:
+### Power Bi DAX
+ - Key Kpis
+  ``` DAX
+  OTIF % = AVERAGE(Fact_Orders[OTIF_Flag])
+```
+  ``` DAX
+  Revenue = SUM('Fact_Orders'[Revenue])
+```
+  ``` DAX
+  Gross Profit = SUM(Fact_Orders[GrossProfit])
+```
+  ``` DAX
+  Stockout Rate = DIVIDE(SUM(Fact_Orders[StockoutFlag]),COUNTROWS(Fact_Orders))
+```
+  ``` DAX
+ Waste Units = SUM(Fact_Orders[WasteQty])
+```
+  ``` DAX
+  Return Rate = DIVIDE(SUM(Fact_Orders[ReturnQty]),SUM(Fact_Orders[OrderQty]))
+```
+  ``` DAX
+  Quality Issue Rate = DIVIDE(SUM(Fact_Orders[QualityIssueFlag]),COUNTROWS(Fact_Orders))
+```
+  ``` DAX
+Stock out Orders = CALCULATE(COUNT('Inventory_Snapshots'[WarehouseID]),'Inventory_Snapshots'[StockoutFlag]=1)
+```
+  ``` DAX
+Quality Issue Rate = DIVIDE(SUM(Fact_Orders[QualityIssueFlag]),COUNTROWS(Fact_Orders))
+```
 
-Code snippet
-Duration.Days([ShipDate] - [OrderDate])
-DAX (Data Analysis Expressions)
+- Supplier with the Highest Quality Issue Rate
+ 
+    ``` DAX
+  Highest Quality Issue Rate = 
+    -- 1. Identify the supplier with the Highest Quality Issue Rate in the current filter context
+    VAR highestsupplier = 
+    TOPN(
+        1, 
+        ALLSELECTED('Dim_Supplier'[SupplierName]), 
+        [Quality Issue Rate], 
+        DESC
+    )
 
-OTIF % (On-Time In-Full Ratio):
+    -- 2. Retrieve the actual calculation value for that specific supplier
+    VAR Highestval = 
+    CALCULATE(
+        [Quality Issue Rate],
+        KEEPFILTERS(highestsupplier)
+    )
 
-Code snippet
-OTIF % = 
-DIVIDE(
-    CALCULATE(COUNTROWS('Sales'), 'Sales'[OTIF_Flag] = 1),
-    COUNTROWS('Sales'),
-    0
-) * 100
+    -- 3. Format the percentage value as text
+    VAR _FormattedValue = FORMAT(Highestval, "0.00%")
 
-Order Cycle Duration Safeguard:
+    -- 4. Construct the final text output string
+    RETURN
+    IF(
+        NOT ISBLANK(Highestval),
+        highestsupplier & ": " & _FormattedValue,
+        "No supplier data available"
+    )
+    ```
 
-Code snippet
-LeadDays = 
-IF(
-    ISBLANK('Sales'[ShipDate]), 
-    BLANK(), 
-    DATEDIFF('Sales'[OrderDate], 'Sales'[ShipDate], DAY)
-)
+ 
 ## Key Insights
 
 - Operational Disruption Profile: Operational bottlenecks are roughly split evenly, with product quality issues representing 50.09% of financial friction and stockout deficiencies making up the remaining 49.91%.
