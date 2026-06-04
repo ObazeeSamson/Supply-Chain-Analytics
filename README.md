@@ -108,13 +108,12 @@ Vendor Bottlenecks: Cross-chart filtering shows that specific suppliers signific
 - Inventory Perishability: Mapping historical inventory longevity trends exposes notable spikes in expired food and beverage quantities during peak stock volume periods.
 
 ## Dashboard Preview
-The analytical control system is arranged into three distinct business views:
-Overview Dashboard: Provides executives with macro metrics regarding profit, global revenue ($605.61K), and high-level fulfillment reliability tracking.
-Suppliers Dashboard: Leverages a Drill-Down Network structure to outline relational constraints binding suppliers to specific distribution points.
-Inventory Dashboard: Examines warehouse shelf health, tracking spoilage trends alongside specific category volume deficits.
-![Overview Dashboard Screen](path/to/Overview_Screenshot.png)
-![Suppliers Dashboard Screen](path/to/Suppliers_Screenshot.png)
-![Inventory Dashboard Screen](path/to/Inventory_Screenshot.png)
+- Overview Dashboard: Provides executives with macro metrics regarding profit, global revenue ($605.61K), and high-level fulfillment reliability tracking.
+![Overview Dashboard Screen](Overview.png)
+- Suppliers Dashboard: Leverages a Drill-Down Network structure to outline relational constraints binding suppliers to specific distribution points.
+![Suppliers Dashboard Screen](Suppliers.png)
+- Inventory Dashboard: Examines warehouse shelf health, tracking spoilage trends alongside specific category volume deficits.
+![Inventory Dashboard Screen](Inventor.png)
 
 ## Recommendations
 
